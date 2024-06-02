@@ -1,0 +1,19 @@
+{
+  "name": "RestSourceConnector",
+  "config": {
+    "connector.class": "com.demo.DemoSourceConnector",
+    "tasks.max": "1",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "http://localhost:8081",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://localhost:8081",
+    "api.url": "http://localhost:8080/demo",
+    "api.http.method": "GET",
+    "api.http.headers": "Content-Type:application/json,Accept:application/json",
+    "api.request.interval.ms": "10000",
+    "demo.topic": "testKafkaTopic",
+    "transforms": "test",
+    "transforms.test.type": "com.demo.DemoJsonTransformer",
+    "transforms.test.schema.name": "Test"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "name": "TestMessageKey",
+    "namespace": "com.demo.records",
+    "fields": [
+    {
+        "name" : "project_id",
+        "type" : "long"
+    }
+    ]
+}
